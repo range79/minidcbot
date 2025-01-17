@@ -16,7 +16,7 @@ public class Main {
         JDA jda = JDABuilder.createDefault(VariablesKt.getBotToken())
               // enables explicit access to message.getContentDisplay()
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MEMBERS)
-                .setActivity(Activity.playing("play.ravensnetwork.com.tr"))
+                .setActivity(Activity.playing(VariablesKt.getBotplaying()))
                 .addEventListeners(new MessageListener()).addEventListeners(new MemberCounter())
                 .build();
 
